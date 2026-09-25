@@ -3,7 +3,7 @@
 const users = {};
 
 const respondJSON = (request, response, status, object) => {
-  const content = JSON.stringify('content');
+  const content = JSON.stringify(object);
   response.writeHead(status, { 
     'Content-Type': 'application/json',
     'Content-Length': Buffer.byteLength(content, 'utf8'),
@@ -44,7 +44,7 @@ const addUser = (request, response) => {
 
   if (responseCode === 201) {
     responseJSON.message = 'Created Successfully';
-    respondJSON(request, response, responseCode, responseJSON);
+    //respondJSON(request, response, responseCode, responseJSON);
     return respondJSON(request, response, responseCode, responseJSON);
   }
 

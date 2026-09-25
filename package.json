@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/server.js",
     "pretest": "eslint ./src --fix",
-    "test": "echo \"Tests complete\""
+    "test": "echo \"Tests complete\"",
+    "debug": "node --inspect ./src/server.js"
   },
   "author": "Cody Van De Mark / Austin Willoughby",
   "license": "ISC",
